@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    image: test:latest
+    container_name: cloudwatchcontainer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: ["/bin/bash", "-c", "/opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent -config file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json & python3 /my_app/app.py"]
+    volumes:
+      - .:/app
+    working_dir: /app

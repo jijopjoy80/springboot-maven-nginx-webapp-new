@@ -1,0 +1,15 @@
+{
+    "logs": {
+      "logs_collected": {
+        "files": {
+          "collect_list": [
+            {
+              "file_path": "/var/log/your_app.log",
+              "log_group_name": "aws_log_agent_cw_citrus_22_07_2024",
+              "log_stream_name": "i-079b4383a4b1112e7",
+              "timezone": "UTC"
+            }
+          ]
+        }
+      }
+    }
